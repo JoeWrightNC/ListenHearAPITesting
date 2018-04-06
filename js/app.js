@@ -19,7 +19,7 @@ function pingSeatGeek() {
       $("#artistsDiv").append(
         `
         <div class="tile col resultCard">
-            <p class="tileTitle">${response.events[i].performers[0].name}</p>
+            <p class="tileTitle">${response.events[i].performers[0].name} | <i>${response.events[i].venue.name}</i></p>
           </div>
         </div>
       </div>
