@@ -29,6 +29,7 @@ function pingSeatGeek() {
 }
 
 function pingSpotify() {
+  console.log("pingStarted")
   // Get the hash of the url
 const hash = window.location.hash
 .substring(1)
@@ -83,41 +84,6 @@ $.ajax({
     
  });
   }; */
-
-
-  /* var client_id = '5d271f5f1df9427cbd92da2e6241045d'; // Your client id
-  var client_secret = '02d6461d16e34a7d8159753edeb67d19'; // Your secret
-
-  // your application requests authorization
-  var authOptions = {
-    url: 'https://accounts.spotify.com/api/token',
-    headers: {
-      'Authorization': 'Basic ' + ((client_id + ':' + client_secret).toString('base64'))
-    },
-    form: {
-      grant_type: 'client_credentials'
-    },
-    json: true
-  };
-
-  request.post(authOptions, function(error, response, body) {
-    if (!error && response.statusCode === 200) {
-
-      // use the access token to access the Spotify Web API
-      var token = body.access_token;
-      var options = {
-        url: 'https://api.spotify.com/v1/users/jmperezperez',
-        headers: {
-          'Authorization': 'Bearer ' + token
-        },
-        json: true
-      };
-      request.get(options, function(error, response, body) {
-        console.log(body);
-      });
-    }
-  }); */
-
 
 $("#submitBtn").on("click", pingSeatGeek);
 
